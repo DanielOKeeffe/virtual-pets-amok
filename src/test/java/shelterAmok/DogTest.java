@@ -48,9 +48,11 @@ public class DogTest {
 		int hunger = anyDog.getHunger();
 		int thirst = anyDog.getThirst();
 		int boredom = anyDog.getBoredom();
+		int happiness = anyDog.getHappiness();
 		assertEquals(15, hunger);
 		assertEquals(15, thirst);
 		assertEquals(5, boredom);
+		assertEquals(15, happiness);
 	}
 	
 	@Test

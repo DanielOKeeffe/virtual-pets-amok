@@ -49,7 +49,9 @@ RoboCat anyRoboCat = new RoboCat("name", 10, 10, 10, 10, "description");
 	public void shouldDecreaseOilLevelBy5AfterPlay() {
 		anyRoboCat.play();
 		int oilLevel = anyRoboCat.getOilLevel();
+		int happiness = anyRoboCat.getHappiness();
 		assertEquals(5, oilLevel);
+		assertEquals(15, happiness);
 	}
 	
 	@Test

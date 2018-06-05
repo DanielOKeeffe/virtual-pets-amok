@@ -20,6 +20,12 @@ public abstract class RoboticPet extends Pet {
 	public void play() {
 		boredom -= 5;
 		this.reduceOilLevel();
+		happiness += 5;
+	}
+	
+	public void roboticTick() {
+		boredom += 1;
+		oilLevel -= 1;
 	}
 
 }

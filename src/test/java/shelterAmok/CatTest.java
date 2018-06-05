@@ -48,9 +48,11 @@ public class CatTest {
 		int hunger = anyCat.getHunger();
 		int thirst = anyCat.getThirst();
 		int boredom = anyCat.getBoredom();
+		int happiness = anyCat.getHappiness();
 		assertEquals(15, hunger);
 		assertEquals(15, thirst);
 		assertEquals(5, boredom);
+		assertEquals(15, happiness);
 	}
 	
 	@Test

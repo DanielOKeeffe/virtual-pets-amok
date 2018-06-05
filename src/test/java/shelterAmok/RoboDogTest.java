@@ -56,7 +56,9 @@ public class RoboDogTest {
 	public void shouldDecreaseOilLevelBy5AfterPlay() {
 		anyRoboDog.play();
 		int oilLevel = anyRoboDog.getOilLevel();
+		int happiness = anyRoboDog.getHappiness();
 		assertEquals(5, oilLevel);
+		assertEquals(15, happiness);
 	}
 	
 	@Test
