@@ -111,4 +111,48 @@ public class VirtualPetShelter {
 			}
 		}
 	}
+
+	public void displayAllOrganicPets() {
+		System.out.println("Name" + "\t\t" + "Hunger" + "\t" + "Thirst" + "\t" + "Boredom" + "\t" + "Waste" + "\t" + "Health" + "\t" + "Happiness");
+		for (Pet pet : pets.values()) {
+			if (pet instanceof OrganicPet) {
+				System.out.println(pet.getName() + "\t\t" + ((OrganicPet)pet).getHunger() + "\t" + ((OrganicPet)pet).getThirst() + "\t" + pet.getBoredom() + 
+						"\t" + ((OrganicPet)pet).getWaste() + "\t" + pet.getHealth() + "\t" + pet.getHappiness());
+			}
+		}
+		
+	}
+	
+	public void displayAllRoboticPets() {
+		System.out.println("Name" + "\t\t" + "Boredom" + "\t" + "Health" + "\t" + "Oil"+ "\t" +  "Happiness" );
+		for (Pet pet : pets.values()) {
+			if (pet instanceof RoboticPet) {
+				System.out.println(pet.getName() + "\t\t" + + pet.getBoredom() + "\t" + pet.getHealth() + "\t" + ((RoboticPet)pet).getOilLevel() + "\t" + pet.getHappiness() );
+			}
+		}
+		
+	}
+
+	public void displayAllPetDescriptions() {
+		System.out.println("Name" + "\t\t" + "Description");
+		for (Pet pet : pets.values()) {
+			System.out.println(pet.getName() + "\t\t" + pet.getDescription());
+		}
+	}
+
+	public boolean checkPetName(String enteredName) {
+		for (Pet pet : pets.values()) {
+			if (pet.getName().equals(enteredName)) {
+				return true;
+			}
+		}
+		return false;
+	}
+	
+	public boolean checkPetType(String enteredType) {
+		if (enteredType.equals("Dog") || enteredType.equals("Cat") || enteredType.equals("RoboDog") || enteredType.equals("RoboCat")) {
+			return true;
+		}
+		return false;
+	}
 }

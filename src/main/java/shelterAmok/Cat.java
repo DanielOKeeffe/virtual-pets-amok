@@ -12,5 +12,17 @@ public class Cat extends OrganicPet {
 		this.happiness = happiness;
 		this.description = description;
 	}
+	
+	public Cat(String name, String description) {
+		this.name = name;
+		this.hunger = 0;
+		this.thirst = 0;
+		this.boredom = 0;
+		this.waste = 0;
+		this.health = 50;
+		this.health = 50;
+		this.happiness = 50;
+		this.description = description;
+	}
 
 }

@@ -12,6 +12,17 @@ public class Dog extends OrganicPet implements WalkDogs {
 		this.happiness = happiness;
 		this.description = description;
 	}
+	
+	public Dog(String name, String description) {
+		this.name = name;
+		this.hunger = 0;
+		this.thirst = 0;
+		this.boredom = 0;
+		this.waste = 0;
+		this.health = 50;
+		this.happiness = 50;
+		this.description = description;
+	}
 
 	@Override
 	public void walk() {

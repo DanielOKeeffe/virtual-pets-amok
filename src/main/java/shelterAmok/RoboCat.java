@@ -10,5 +10,14 @@ public class RoboCat extends RoboticPet {
 		this.oilLevel = oilLevel;
 		this.description = description;
 	}
+	
+	public RoboCat(String name, String description) {
+		this.name = name;
+		this.boredom = 0;
+		this.health = 50;
+		this.happiness = 50;
+		this.oilLevel = 50;
+		this.description = description;
+	}
 
 }
